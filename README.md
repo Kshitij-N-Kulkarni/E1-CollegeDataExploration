@@ -4,14 +4,18 @@ Pre-requisites:
 
 1. Git and GitHub. You can learn about it at [YouTube][1]
 2. Basic R Language
+3. R Markdown
 3. Excel
 
 Exercise for exploring college data set.
 
-1. Do not change the exercise file "E1-CollegeDataExploration.Rmd" unless you want to contribute by adding more questions.
-2. Copy the excercise file "E1-CollegeDataExploration.Rmd" file to solution folder.
-2. Append your GitHub user name to E1-CollegeDataExploration.Rmd file e.g. ajit555-E1-CollegeDataExploration.Rmd
-3.Provide the R code  
+1. **Do not change** the **exercise file** "E1-CollegeDataExploration.Rmd" unless you want to contribute by adding more questions.
+2. **Copy** the excercise file "E1-CollegeDataExploration.Rmd" file to **solution** folder.
+3. **Create** a **solution file** by **appending your GitHub user name** to E1-CollegeDataExploration.Rmd file e.g. ajit555-E1-CollegeDataExploration.Rmd
+4. **Solve** the exercises by providing the R code.
+5. **Check-in** your solution file
+
+
 
 Please collaborate and discuss among members by posting your questions / queries in the [issues][2] section of GitHub.
 
