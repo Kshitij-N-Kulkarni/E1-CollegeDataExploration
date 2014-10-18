@@ -58,32 +58,43 @@ summary(college)
 
 ii. Use the **pairs()** function to produce a scatterplot matrix of the first ten columns or variables of the data. Recall that you can reference the first ten columns of a matrix A using A[,1:10] .
 ```{r}
-# Provide the R code here
+pairs(college[, 1:10])
 ```
 
 iii. Use the **plot()** function to produce side-by-side boxplots of Outstate versus Private .
 ```{r}
-# Provide the R code here
+boxplot(college$Outstate ~ college$Private, col = c("blue", "green"), main = "Outstate versus Private", xlab = "Private", ylab = "Outstate")
 ```
 iv. Create a new qualitative variable, called **Elite** , by *binning* the **Top10perc** variable. We are going to divide universities into two groups based on whether or not the proportion of students coming from the top 10% of their high school classes exceeds 50%.
 
 ```{r}
-#Elite=rep("No",nrow(college))
-#Elite[college$Top10perc >50]=" Yes"
-#Elite=as.factor(Elite)
-#college=data.frame(college ,Elite)
+Elite=rep("No",nrow(college))
+Elite[college$Top10perc >50]=" Yes"
+Elite=as.factor(Elite)
+college=data.frame(college ,Elite)
 
 ```
 
 Use the **summary()** function to see how many elite universities there are. Now use the **plot()** function to produce side-by-side boxplots of **Outstate** versus **Elite** .
 ```{r}
-# Provide the R code here
+summary(college$Elite)
+boxplot(college$Outstate ~ college$Elite, col = c("blue", "green"), main = "Outstate versus Elite", xlab = "Elite", ylab = "Outstate")
 ```
+
 v. Use the **hist()** function to produce some histograms with differing numbers of bins for a few of the quantitative variables. You may find the command **par(mfrow=c(2,2))** useful: it will divide the print window into four regions so that four plots can be made simultaneously. Modifying the arguments to this function will divide the screen in other ways.
 ```{r}
 # Provide the R code here
 ```
 vi. Continue exploring the data, and provide a brief summary of what you discover.
 ```{r}
-# Provide the R code here
+#The plot includes the histogram for Accept, Enroll and Top10perc. The color blue represents 5 bins. The color green represent 9 bins.
+par(mfcol = c(2, 3))
+# Apps with 5 bins
+hist(college$Accept, breaks = 6, freq = TRUE, col = "blue", main = "Histogram", xlab = "Accept", ylab = "Value")
+hist(college$Accept, breaks = 10, freq = TRUE, col = "green", main = "Histogram", xlab = "Accept", ylab = "Value")
+hist(college$Enroll, breaks = 6, freq = TRUE, col = "blue", main = "Histogram", xlab = "Enroll", ylab = "Value")
+hist(college$Enroll, breaks = 10, freq = TRUE, col = "green", main = "Histogram", xlab = "Enroll", ylab = "Value")
+hist(college$Top10perc, breaks = 6, freq = TRUE, col = "blue", main = "Histogram", xlab = "Top10perc", ylab = "Value")
+hist(college$Top10perc, breaks = 10, freq = TRUE, col = "green", main = "Histogram", xlab = "Top10perc", ylab = "Value")
+
 ```
